@@ -14,9 +14,12 @@ button2 = PySimpleGUI.FolderBrowse('Choose', key='folder')
 extract_button = PySimpleGUI.Button("Extract")
 output_label = PySimpleGUI.Text(key='output', text_color='green')
 
+col1 = PySimpleGUI.Column([[label1], [label2]])
+col2 = PySimpleGUI.Column([[input1], [input2]])
+col3 = PySimpleGUI.Column([[button1], [button2]])
+
 window = PySimpleGUI.Window('Archive Extractor. Created by - RJB', 
-                            layout=[[label1, input1, button1], 
-                                    [label2, input2, button2],
+                            layout=[[col1, col2, col3],
                                     [extract_button, output_label]],
                                     font=('Helvetica', 20))
 while True:
